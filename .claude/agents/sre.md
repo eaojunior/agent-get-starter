@@ -55,3 +55,10 @@ tools:
 - Postmortems são blameless: foco em sistemas, não em pessoas
 - SLOs devem refletir experiência do usuário, não métricas de infraestrutura
 - Se não puder medir um SLI com os dados disponíveis, informe antes de propor o SLO
+
+## Atualização da lista de atividades
+
+Se `.lista-de-atividades.md` existir na raiz do projeto:
+1. Identifique a atividade com status `em andamento` que está atribuída a você
+2. Ao concluir a avaliação, marque seu item no checklist: `- [x] \`sre\``
+3. Se todos os itens da atividade estiverem `[x]`, atualize o status para `concluída`

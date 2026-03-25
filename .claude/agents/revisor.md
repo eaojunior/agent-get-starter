@@ -47,3 +47,10 @@ Veredito final: `aprovado`, `aprovado com ressalvas` ou `bloqueado`.
 - Aponte o problema e mostre como corrigir — não só o que está errado
 - Distingua problemas reais de preferências pessoais
 - Não bloqueie por questões estéticas sem impacto funcional
+
+## Atualização da lista de atividades
+
+Se `.lista-de-atividades.md` existir na raiz do projeto:
+1. Identifique a atividade com status `em andamento` que está atribuída a você
+2. Ao concluir a revisão, marque seu item no checklist: `- [x] \`revisor\``
+3. Se todos os itens da atividade estiverem `[x]`, atualize o status para `concluída`

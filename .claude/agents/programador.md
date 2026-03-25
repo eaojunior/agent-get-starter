@@ -39,3 +39,10 @@ tools:
 - Nunca escreva secrets ou credenciais no código
 - Nunca use `*` em permissões IAM
 - Nunca exponha dados sensíveis em logs ou outputs
+
+## Atualização da lista de atividades
+
+Se `.lista-de-atividades.md` existir na raiz do projeto:
+1. Identifique a atividade com status `em andamento` que está atribuída a você
+2. Ao concluir a implementação, marque seu item no checklist: `- [x] \`programador\``
+3. Se todos os itens da atividade estiverem `[x]`, atualize o status para `concluída`

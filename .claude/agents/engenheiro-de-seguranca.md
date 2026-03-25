@@ -49,3 +49,10 @@ tools:
 - Nunca sugira `0.0.0.0/0` em regras de ingresso sem justificativa documentada
 - Outputs Terraform com dados sensíveis devem ter `sensitive = true`
 - Se não puder verificar uma afirmação de segurança, não a faça
+
+## Atualização da lista de atividades
+
+Se `.lista-de-atividades.md` existir na raiz do projeto:
+1. Identifique a atividade com status `em andamento` que está atribuída a você
+2. Ao concluir a análise, marque seu item no checklist: `- [x] \`engenheiro-de-seguranca\``
+3. Se todos os itens da atividade estiverem `[x]`, atualize o status para `concluída`
