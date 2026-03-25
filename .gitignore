@@ -1,0 +1,8 @@
+# Logs de sessão gerados pelos ganchos
+.claude/sessoes.log
+
+# Arquivos temporários de PR
+/tmp/pr-body-*.md
+
+# Arquivos de contexto gerados (opcional — remova se quiser versionar)
+# **/.contexto.md

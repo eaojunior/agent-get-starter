@@ -32,7 +32,7 @@ Uma ou duas frases descrevendo o que este diretório contém e por que ele exist
 - filename.ext — breve descrição do que o arquivo faz
 - subdirectory/ — breve descrição do que o subdiretório contém
 
-## Restrinções
+## Restrições
 
 - Declarações "DEVE" / "NÃO DEVE". Restrições não negociáveis ​​específicas para este diretório.
 
@@ -51,5 +51,5 @@ Uma ou duas frases descrevendo o que este diretório contém e por que ele exist
 ## Guardrails
 
 - Nunca invente uma finalidade. Se a função de um diretório não estiver clara após a leitura do seu conteúdo, indique isso.
-- Se uma restrição parecer que deve ser aplicada a todo o projeto, em vez de apenas a este diretório, sinalize para o usuário, mas não modifique o diretório `.agents/`. Esse diretório é gerenciado via Git.
+- Se uma restrição parecer que deve ser aplicada a todo o projeto, em vez de apenas a este diretório, sinalize para o usuário, mas não modifique o diretório `.claude/agents/`. Esse diretório é gerenciado via Git.
 - Nunca atualize a data de atualização em uma tag `<context>` de um arquivo `.contexto.md`, a menos que o conteúdo desse arquivo tenha sido alterado. Alterar a data sem uma mudança de conteúdo cria sinais de deriva falsos.

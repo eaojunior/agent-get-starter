@@ -8,6 +8,8 @@ Quando a tarefa exige buscar referências ou documentação antes de implementar
 
 ## Agentes envolvidos
 
+> Fluxo coordenado pelo `orquestrador`.
+
 1. `contextualizador` — mapeia o estado atual do projeto e entrega o contexto para os demais agentes
 2. `pesquisador` — busca documentação, exemplos e alternativas externas
 3. `arquiteto` — define a abordagem com base no contexto e na pesquisa
@@ -16,7 +18,6 @@ Quando a tarefa exige buscar referências ou documentação antes de implementar
 6. `programador` — implementa a solução conforme a arquitetura definida
 7. `revisor` — valida qualidade, correção e boas práticas do código entregue
 8. `sre` — avalia impacto em confiabilidade, observabilidade e necessidade de alertas ou runbooks
-9. `orquestrador` — coordena toda a execução, sintetiza os resultados e entrega o relatório final
 
 ## Inputs esperados
 

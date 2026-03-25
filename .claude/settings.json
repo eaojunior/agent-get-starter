@@ -13,18 +13,7 @@
     "deny": []
   },
   "hooks": {
-    "SessionStart": [
-      {
-        "matcher": "",
-        "hooks": [
-          {
-            "type": "command",
-            "command": "bash ganchos/ao-iniciar.sh"
-          }
-        ]
-      }
-    ],
-    "SessionStop": [
+    "Stop": [
       {
         "matcher": "",
         "hooks": [

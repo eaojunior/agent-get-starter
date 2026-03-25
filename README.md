@@ -10,10 +10,10 @@ Configure comportamentos, agentes e automações em linguagem natural. O Claude 
 
 ```
 agent-get-starter/
-├── CLAUDE.md                        # Regras e comportamento da plataforma
+├── CLAUDE.md                              # Regras e comportamento da plataforma
 ├── .claude/
-│   ├── settings.json                # Modelo, permissões e hooks
-│   ├── agents/                      # Agentes especializados
+│   ├── settings.json                      # Modelo, permissões e hooks
+│   ├── agents/                            # Agentes especializados
 │   │   ├── orquestrador.md
 │   │   ├── contextualizador.md
 │   │   ├── pesquisador.md
@@ -23,15 +23,19 @@ agent-get-starter/
 │   │   ├── engenheiro-de-dados.md
 │   │   ├── engenheiro-de-seguranca.md
 │   │   └── sre.md
-│   └── skills/                      # Slash commands customizados
-│       ├── executar-fluxo.md        # /executar-fluxo
-│       └── status-plataforma.md     # /status-plataforma
-├── fluxos/                          # Fluxos multi-agente pré-definidos
+│   └── skills/
+│       ├── contexto.md                    # Esquema dos arquivos .contexto.md
+│       ├── executar-fluxo.md              # /executar-fluxo
+│       └── status-plataforma.md           # /status-plataforma
+├── fluxos/
+│   ├── templates/
+│   │   └── planejamento.md                # Template de documento de planejamento
 │   ├── pesquisa-e-implementacao.md
 │   └── pipeline-revisao-codigo.md
-└── ganchos/                         # Scripts executados pelos hooks
-    ├── ao-iniciar.sh
-    └── ao-encerrar.sh
+├── ganchos/
+│   ├── ao-iniciar.sh                      # Placeholder — sem hook nativo de início
+│   └── ao-encerrar.sh                     # Executado pelo hook Stop
+└── README.md
 ```
 
 ## Agentes
@@ -54,6 +58,8 @@ agent-get-starter/
 |---|---|
 | `/executar-fluxo` | Executa um fluxo multi-agente pré-definido da pasta `fluxos/` |
 | `/status-plataforma` | Exibe visão geral de agentes, skills, fluxos e configuração |
+
+> `contexto.md` não é um slash command — é o esquema que define como os arquivos `.contexto.md` devem ser criados pelo `contextualizador` em cada diretório do projeto.
 
 ## Como usar
 
@@ -106,7 +112,7 @@ Edite o `CLAUDE.md` — é o arquivo central que define tom, regras e como a pla
 
 ### Configurar permissões e hooks
 
-Edite `.claude/settings.json`.
+Edite `.claude/settings.json`. O hook `Stop` é executado ao final de cada resposta do agente. Não há hook nativo de início de sessão no Claude Code — o script `ganchos/ao-iniciar.sh` existe como placeholder para uso manual ou integração futura.
 
 ## Requisitos
 

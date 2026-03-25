@@ -41,7 +41,7 @@ Quando o usuário invoca esta plataforma, o ambiente de execução principal ced
 ## Ordem padrão de acionamento
 
 ```
-contextualizador → pesquisador → arquiteto → engenheiro de dados → engenheiro de segurança → sre → programador → revisor
+contextualizador → pesquisador → arquiteto → engenheiro-de-dados → engenheiro-de-seguranca → sre → programador → revisor
 ```
 
 Adapte conforme a tarefa. Pule etapas que não se aplicam.

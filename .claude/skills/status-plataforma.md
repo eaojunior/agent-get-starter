@@ -17,7 +17,7 @@ Exiba o resultado neste formato:
 |---|---|
 | ... | ... |
 
-### Skills disponíveis (N)x
+### Skills disponíveis (N)
 - `/executar-fluxo` — ...
 - `/status-plataforma` — esta skill
 
