@@ -68,15 +68,50 @@ agent-get-starter/
 - [Claude Code](https://claude.ai/code) instalado (`npm install -g @anthropic-ai/claude-code`)
 - Conta Anthropic com acesso à API
 
-### 2. Instalação
+---
+
+### Opção A — Projeto novo
+
+Clone o repositório e abra no Claude Code:
 
 ```bash
-git clone https://github.com/eaojunior/agent-get-starter.git
-cd agent-get-starter
+git clone https://github.com/eaojunior/agent-get-starter.git meu-projeto
+cd meu-projeto
 claude
 ```
 
 O Claude Code detecta automaticamente o `CLAUDE.md` e carrega as regras da plataforma. Nenhuma configuração adicional é necessária para começar.
+
+---
+
+### Opção B — Projeto existente
+
+Copie os arquivos da plataforma para dentro do seu projeto:
+
+```bash
+# Na raiz do seu projeto existente
+git clone https://github.com/eaojunior/agent-get-starter.git /tmp/agent-get-starter
+
+cp /tmp/agent-get-starter/CLAUDE.md ./CLAUDE.md
+cp -r /tmp/agent-get-starter/.claude ./.claude
+cp -r /tmp/agent-get-starter/fluxos ./fluxos
+cp -r /tmp/agent-get-starter/ganchos ./ganchos
+
+rm -rf /tmp/agent-get-starter
+```
+
+Em seguida, adapte ao contexto do seu projeto:
+
+1. **`CLAUDE.md`** — ajuste as regras, idioma e tom para o seu projeto. Se já existir um `CLAUDE.md`, mescle os conteúdos manualmente
+2. **`.claude/agents/`** — remova agentes que não fazem sentido para o seu contexto; adicione os que faltam
+3. **`.claude/settings.json`** — revise as permissões de Bash: adicione os comandos que seus agentes precisarão usar (ex: `npm`, `terraform`, `docker`)
+4. **`fluxos/`** — adapte os fluxos existentes ou crie novos específicos para o seu projeto
+
+Depois abra o Claude Code na raiz do projeto:
+
+```bash
+claude
+```
 
 ### 3. Interação em linguagem natural
 
