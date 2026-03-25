@@ -41,8 +41,12 @@ Quando o usuário invoca esta plataforma, o ambiente de execução principal ced
 ## Ordem padrão de acionamento
 
 ```
-contextualizador → pesquisador → arquiteto → engenheiro-de-dados → engenheiro-de-seguranca → sre → programador → revisor
+contextualizador → pesquisador → arquiteto → engenheiro-de-dados → engenheiro-de-seguranca → sre → programador → contextualizador → revisor
 ```
+
+O `contextualizador` aparece duas vezes intencionalmente:
+- **Antes** da implementação: mapeia o estado atual e gera `.contexto.md` nos diretórios existentes
+- **Após** o `programador`: re-executa para cobrir os diretórios criados durante a implementação
 
 Adapte conforme a tarefa. Pule etapas que não se aplicam.
 

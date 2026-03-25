@@ -16,8 +16,9 @@ Quando a tarefa exige buscar referências ou documentação antes de implementar
 4. `engenheiro-de-dados` — avalia impacto em dados: schemas, pipelines ou contratos afetados (acionar se houver mudança em camada de dados)
 5. `engenheiro-de-seguranca` — analisa riscos de segurança da abordagem proposta antes da implementação
 6. `programador` — implementa a solução conforme a arquitetura definida
-7. `revisor` — valida qualidade, correção e boas práticas do código entregue
-8. `sre` — avalia impacto em confiabilidade, observabilidade e necessidade de alertas ou runbooks
+7. `contextualizador` — re-executa após a implementação para gerar `.contexto.md` nos diretórios criados pelo programador
+8. `revisor` — valida qualidade, correção e boas práticas do código entregue
+9. `sre` — avalia impacto em confiabilidade, observabilidade e necessidade de alertas ou runbooks
 
 ## Inputs esperados
 
