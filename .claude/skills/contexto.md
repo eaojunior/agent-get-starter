@@ -1,5 +1,5 @@
 ---
-shortDescription: Como manter os arquivos .context.md do projeto.
+shortDescription: Como manter os arquivos .contexto.md do projeto.
 usedBy: [programador, contextualizador]
 version: 0.1.0
 lastUpdated: 2026-03-25

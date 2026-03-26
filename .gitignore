@@ -6,3 +6,7 @@
 
 # Arquivos de contexto gerados (opcional — remova se quiser versionar)
 # **/.contexto.md
+
+# Arquivos de controle de atividades gerados pelo orquestrador (opcional — remova se quiser versionar)
+# .lista-de-atividades.md
+# .configuracoes.md

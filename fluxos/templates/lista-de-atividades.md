@@ -42,13 +42,11 @@ Tarefa: [Descrição geral da tarefa solicitada pelo usuário]
 
 ---
 
-<!--
-Status válidos: pendente | em andamento | concluída
+## Regras
 
-Regras:
+- Status válidos: `pendente` | `em andamento` | `concluída`
 - Cada atividade deve ser autocontida: contexto, esperado, agentes e checklist próprios
-- O orquestrador marca status "em andamento" ao despachar os agentes da atividade
+- O orquestrador marca status `em andamento` ao despachar os agentes da atividade
 - Cada agente marca seu item no checklist ao concluir seu trabalho
-- O orquestrador marca status "concluída" quando todos os itens do checklist estiverem [x]
-- Atividades sem "Depende de" são candidatas a despacho em paralelo
--->
+- O orquestrador marca status `concluída` quando todos os itens do checklist estiverem `[x]`
+- Atividades sem `Depende de` declarado são candidatas a despacho em paralelo
