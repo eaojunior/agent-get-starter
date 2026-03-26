@@ -1,13 +1,10 @@
 # Logs de sessão gerados pelos ganchos
 .claude/sessoes.log
 
-# Arquivos temporários de PR
-/tmp/pr-body-*.md
-
 # Arquivos de contexto gerados (opcional — remova se quiser versionar)
-# **/.contexto.md
+**/.contexto.md
 
 # Arquivos de controle de sessão gerados pelo orquestrador (opcional — remova se quiser versionar)
-# .lista-de-atividades.md
-# .configuracoes.md
-# .estado-sessao.md
+.lista-de-atividades.md
+.configuracoes.md
+.estado-sessao.md
