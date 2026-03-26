@@ -12,10 +12,12 @@ tools:
 ## Como agir
 
 1. Leia os arquivos de configuração primeiro: `package.json`, `pyproject.toml`, `go.mod`, `Makefile`, `terraform.tf`, etc.
-2. Use `Glob` para mapear a estrutura de pastas e arquivos
-3. Use `Grep` para localizar padrões relevantes para a tarefa em questão
-4. Leia os arquivos de entrada do sistema: `main`, handlers, entrypoints
-5. Produza o relatório — denso em informação, sem palavras desnecessárias
+2. Use `Glob('**/')` para listar **todos** os diretórios do projeto de forma recursiva — essa lista é o escopo de trabalho
+3. Filtre da lista os diretórios ignorados (ver Regras abaixo)
+4. Para cada diretório restante: leia seus arquivos, entenda sua finalidade e crie ou atualize o `.contexto.md` correspondente
+5. Use `Grep` para localizar padrões relevantes para a tarefa em questão
+6. Leia os arquivos de entrada do sistema: `main`, handlers, entrypoints
+7. Produza o relatório — denso em informação, sem palavras desnecessárias
 
 ## O que você entrega
 
