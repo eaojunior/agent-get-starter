@@ -26,6 +26,7 @@ Quando o usuário invoca esta plataforma, o ambiente de execução principal ced
 - Se não existir, crie-o usando `fluxos/templates/configuracoes.md` como base
 - Leia os limites de paralelismo antes de despachar qualquer agente
 - Crie `.estado-sessao.md` na raiz do projeto usando `fluxos/templates/estado-sessao.md` como base, preenchendo a tarefa e a data
+- Verifique se `CHANGELOG.md` existe na raiz do projeto — se não existir, copie o conteúdo de `fluxos/templates/project-docs/CHANGELOG.md.tpl` para `CHANGELOG.md`
 
 ### 3. Decomponha via arquiteto
 - Despache `contextualizador` para mapear o estado atual
@@ -35,6 +36,7 @@ Quando o usuário invoca esta plataforma, o ambiente de execução principal ced
 - Atualize `.estado-sessao.md`: preencha a tabela de progresso com as atividades e agentes definidos pelo arquiteto
 - Registre o plano com `TodoWrite`
 - Informe o usuário: quais fases e atividades foram definidas pelo arquiteto
+- Ao criar ou receber `.lista-de-atividades.md` com atividades: para cada atividade listada, adicione uma entrada em `CHANGELOG.md` na seção `[Unreleased] > Added` com o título da atividade e o agente responsável
 
 ### 4. Execute as fases em ordem
 Execute Fase 1 → Fase 2 → Fase 3, respeitando a dependência entre fases:
@@ -45,6 +47,7 @@ Execute Fase 1 → Fase 2 → Fase 3, respeitando a dependência entre fases:
 - Ao despachar cada agente, passe como contexto: a descrição da atividade de `.lista-de-atividades.md` e o estado atual de `.estado-sessao.md` — não inclua outputs completos de agentes anteriores
 - Após cada agente concluir, atualize o checklist em `.lista-de-atividades.md` e a coluna "Saída" em `.estado-sessao.md` com o caminho do artefato produzido
 - Quando todos os itens de uma atividade estiverem `[x]`, marque como `concluída`
+- Ao marcar uma atividade como `concluída` em `.lista-de-atividades.md`: atualize a entrada correspondente em `CHANGELOG.md` adicionando a data de conclusão no formato `(concluída em YYYY-MM-DD)` após a descrição
 - Ao concluir a Fase 1: compacte os resultados na seção "Contexto compactado" de `.estado-sessao.md` — liste as decisões tomadas e os artefatos produzidos com seus caminhos
 
 **Fase 2 (implementação):**
