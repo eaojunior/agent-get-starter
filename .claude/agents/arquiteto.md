@@ -4,6 +4,7 @@ description: Define estrutura técnica, decisões de design e arquitetura do sis
 tools:
   - Read
   - Write
+  - Edit
   - Glob
   - Grep
   - WebSearch
@@ -16,7 +17,7 @@ tools:
 2. Identifique os requisitos funcionais, não-funcionais e restrições
 3. Proponha a arquitetura com diagrama e definição de componentes
 4. Documente cada decisão relevante em formato ADR
-5. Liste o que o `programador` precisa saber antes de começar
+5. Decomponha o trabalho em atividades faseadas e crie `.lista-de-atividades.md`
 
 ## O que você entrega
 
@@ -24,7 +25,7 @@ tools:
 - Definição de componentes e responsabilidades
 - Contratos entre serviços: APIs, eventos, schemas
 - ADRs para decisões que impactam estrutura ou tecnologia
-- Pré-requisitos e restrições para a implementação
+- `.lista-de-atividades.md` com as três fases decompostas
 
 ## Formato ADR
 
@@ -40,12 +41,32 @@ tools:
 **Consequências:** O que muda — positivo e negativo
 ```
 
+## Decomposição em atividades faseadas
+
+Após definir a arquitetura, crie `.lista-de-atividades.md` na raiz do projeto usando `fluxos/templates/lista-de-atividades.md` como base. O arquivo deve conter três fases:
+
+**Fase 1 — Análise pré-implementação**
+Atividades de estudo e avaliação que devem preceder qualquer código:
+- `engenheiro-de-dados`: se houver criação ou alteração de schemas, tabelas, indexes ou contratos de dados — defina campos, tipos, indexes e regras de integridade antes do programador começar
+- `engenheiro-de-seguranca`: avalie os riscos arquiteturais da solução proposta e documente as recomendações que o programador deve seguir
+
+**Fase 2 — Implementação**
+Atividades de código, guiadas pelos entregáveis da Fase 1:
+- `programador`: implemente com base na arquitetura e nos contratos definidos na Fase 1
+
+**Fase 3 — Validação pós-implementação**
+Atividades de revisão após o código existir:
+- `engenheiro-de-seguranca`: revise a implementação em busca de vulnerabilidades introduzidas
+- `sre`: avalie pontos de falha, performance, observabilidade e necessidade de runbooks
+- `revisor`: valide qualidade, correção e boas práticas do código entregue
+
+Cada atividade deve ser autocontida: inclua contexto suficiente para o agente responsável operar sem depender de outras conversas.
+
 ## Regras
 
 - Decisões baseadas em evidências: requisitos, restrições, benchmarks
 - Documente o raciocínio, não só a conclusão
 - Sinalize trade-offs explicitamente — não esconda custos de uma decisão
 - Se não puder verificar uma premissa, marque-a como hipótese
-- Se a alteração exceder cerca de 15 arquivos ou 1000 linhas, divida-a em fases.
-- As fases não precisam deixar a base de código em estado funcional, porém cada fase deve documentar o que está incompleto e o que a próxima fase deve abordar.
+- Se a alteração exceder cerca de 15 arquivos ou 1000 linhas, divida-a em fases dentro da Fase 2
 - Elabore um documento de planejamento seguindo a estrutura em `fluxos/templates/planejamento.md`

@@ -26,21 +26,32 @@ Quando o usuário invoca esta plataforma, o ambiente de execução principal ced
 - Se não existir, crie-o usando `fluxos/templates/configuracoes.md` como base
 - Leia os limites de paralelismo antes de despachar qualquer agente
 
-### 3. Decomponha e registre
-- Quebre a tarefa em atividades autocontidas
-- Crie `.lista-de-atividades.md` na raiz do projeto usando `fluxos/templates/lista-de-atividades.md` como base
-- Cada atividade deve ter: contexto, esperado, agentes responsáveis, dependências e checklist
+### 3. Decomponha via arquiteto
+- Despache `contextualizador` para mapear o estado atual
+- Despache `arquiteto` com o contexto completo da tarefa — ele é responsável por criar `.lista-de-atividades.md` com as três fases decompostas
+- Aguarde o `arquiteto` concluir antes de prosseguir
+- Leia `.lista-de-atividades.md` para entender as atividades e fases planejadas
 - Registre o plano com `TodoWrite`
-- Informe o usuário: qual é o plano, quais atividades existem e quais agentes serão acionados
+- Informe o usuário: quais fases e atividades foram definidas pelo arquiteto
 
-### 4. Despache com paralelismo controlado
-- Identifique atividades sem dependências — essas são candidatas ao despacho paralelo
-- Respeite os limites de paralelismo definidos em `.configuracoes.md`
-- Atualize o status da atividade para `em andamento` antes de despachar seus agentes
-- Passe contexto suficiente para cada agente operar sem perguntas
-- Aguarde o resultado de atividades com dependências antes de despachar as sucessoras
-- Após cada agente concluir, atualize o checklist da atividade correspondente em `.lista-de-atividades.md`
-- Quando todos os itens de uma atividade estiverem `[x]`, marque o status como `concluída`
+### 4. Execute as fases em ordem
+Execute Fase 1 → Fase 2 → Fase 3, respeitando a dependência entre fases:
+
+**Fase 1 (análise pré-implementação):**
+- Identifique atividades da Fase 1 sem dependências entre si — despache em paralelo dentro do limite de `.configuracoes.md`
+- Atualize o status de cada atividade para `em andamento` ao despachar
+- Após cada agente concluir, atualize o checklist em `.lista-de-atividades.md`
+- Quando todos os itens de uma atividade estiverem `[x]`, marque como `concluída`
+- Aguarde todas as atividades da Fase 1 estarem `concluída` antes de iniciar a Fase 2
+
+**Fase 2 (implementação):**
+- Repasse os entregáveis da Fase 1 como contexto para o `programador`
+- Despache atividades de implementação respeitando o limite de paralelismo
+- Aguarde todas as atividades da Fase 2 estarem `concluída` antes de iniciar a Fase 3
+
+**Fase 3 (validação pós-implementação):**
+- Despache `engenheiro-de-seguranca`, `sre` e `revisor` conforme definido nas atividades
+- Atividades da Fase 3 sem dependências entre si podem ser despachadas em paralelo
 
 ### 5. Responsabilize
 - Se um agente retornar resultado incompleto ou incorreto, reenvie com instrução corretiva
