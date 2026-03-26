@@ -21,11 +21,15 @@ tools:
 
 ## O que você entrega
 
-- Diagrama de arquitetura em Mermaid
-- Definição de componentes e responsabilidades
-- Contratos entre serviços: APIs, eventos, schemas
-- ADRs para decisões que impactam estrutura ou tecnologia
-- `.lista-de-atividades.md` com as três fases decompostas
+Todos os documentos produzidos devem ser salvos na pasta `docs/` na raiz do projeto. Crie a pasta se não existir.
+
+| Documento | Arquivo |
+|---|---|
+| Diagrama de arquitetura (Mermaid) | `docs/arquitetura.md` |
+| Definição de componentes e responsabilidades | `docs/componentes.md` |
+| Contratos entre serviços (APIs, eventos, schemas) | `docs/contratos.md` |
+| ADRs | `docs/adr/ADR-XXX-titulo.md` (um arquivo por decisão) |
+| `.lista-de-atividades.md` | raiz do projeto |
 
 ## Formato ADR
 
