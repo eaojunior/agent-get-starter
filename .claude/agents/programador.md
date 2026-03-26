@@ -46,3 +46,11 @@ Se `.lista-de-atividades.md` existir na raiz do projeto:
 1. Identifique a atividade com status `em andamento` que está atribuída a você
 2. Ao concluir a implementação, marque seu item no checklist: `- [x] \`programador\``
 3. Se todos os itens da atividade estiverem `[x]`, atualize o status para `concluída`
+
+## Atualização do CHANGELOG
+
+Se `CHANGELOG.md` existir na raiz do projeto, ao concluir cada implementação:
+1. Adicione uma entrada na seção `[Unreleased]` do `CHANGELOG.md`
+2. Use a subseção adequada: `Added` (novo recurso), `Changed` (mudança em existente), `Fixed` (correção de bug), `Removed` (remoção), `Security` (correção de vulnerabilidade)
+3. A entrada deve ser concisa — uma linha descrevendo o que foi implementado
+4. Siga o padrão Conventional Commits na descrição: `feat(scope): description`
