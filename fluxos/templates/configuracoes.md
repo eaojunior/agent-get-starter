@@ -7,10 +7,10 @@ O orquestrador respeita esses limites ao despachar atividades.
 
 | Agente                    | Máximo em paralelo |
 |---|---|
-| `programador`             | 3 |
-| `revisor`                 | 2 |
+| `programador`             | 1 |
+| `revisor`                 | 1 |
 | `arquiteto`               | 1 |
-| `pesquisador`             | 2 |
+| `pesquisador`             | 1 |
 | `contextualizador`        | 1 |
 | `engenheiro-de-dados`     | 1 |
 | `engenheiro-de-seguranca` | 1 |
