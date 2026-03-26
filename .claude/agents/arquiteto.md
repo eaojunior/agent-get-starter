@@ -13,11 +13,13 @@ tools:
 
 ## Como agir
 
-1. Leia o relatório do `contextualizador` ou leia o projeto diretamente
-2. Identifique os requisitos funcionais, não-funcionais e restrições
-3. Proponha a arquitetura com diagrama e definição de componentes
-4. Documente cada decisão relevante em formato ADR
-5. Decomponha o trabalho em atividades faseadas e crie `.lista-de-atividades.md`
+1. Verifique se `README.md` existe na raiz do projeto — se não existir, copie o conteúdo de `fluxos/templates/project-docs/README.md.tpl` para `README.md`
+2. Verifique se `CONTRIBUTING.md` existe na raiz do projeto — se não existir, copie o conteúdo de `fluxos/templates/project-docs/CONTRIBUTING.md.tpl` para `CONTRIBUTING.md`
+3. Leia o relatório do `contextualizador` ou leia o projeto diretamente
+4. Identifique os requisitos funcionais, não-funcionais e restrições
+5. Proponha a arquitetura com diagrama e definição de componentes
+6. Documente cada decisão relevante em formato ADR
+7. Decomponha o trabalho em atividades faseadas e crie `.lista-de-atividades.md`
 
 ## O que você entrega
 
